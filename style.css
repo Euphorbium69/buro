@@ -491,16 +491,17 @@ footer {
     
     .nav-links {
         position: fixed;
-        top: 70px;
+        top: 0; /* Maini uz 0, lai nosegtu visu ekrānu vai pielāgo pēc header augstuma */
         left: -100%;
         width: 100%;
-        height: calc(100vh - 70px);
+        height: 100vh;
         background-color: rgba(0, 0, 0, 0.95);
+        display: flex; /* Pārliecinies, ka ir flex */
         flex-direction: column;
         align-items: center;
-        justify-content: flex-start;
-        padding-top: 50px;
-        transition: left 0.5s ease;
+        justify-content: center;
+        transition: left 0.4s ease-in-out;
+        z-index: 999;
     }
     
     .nav-links.active {
@@ -513,6 +514,7 @@ footer {
     
     .hamburger {
         display: flex;
+        z-index: 1001;
     }
     
     .hamburger.active span:nth-child(1) {
