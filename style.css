@@ -261,6 +261,12 @@ header.scrolled {
     margin-bottom: 20px;
 }
 
+.service-icon img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
 .service-card h3 {
     font-size: 1.5rem;
 }
